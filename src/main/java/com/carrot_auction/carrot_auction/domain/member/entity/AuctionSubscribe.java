@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="AuctionSubscribe")

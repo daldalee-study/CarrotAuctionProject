@@ -1,5 +1,6 @@
 package com.carrot_auction.carrot_auction.domain.auction.entity;
 
+import com.carrot_auction.carrot_auction.global.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,11 +9,10 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="Terms")
-public class Terms {
+public class Terms extends BaseEntity {
 
     @Id
     @Column(name = "Id")

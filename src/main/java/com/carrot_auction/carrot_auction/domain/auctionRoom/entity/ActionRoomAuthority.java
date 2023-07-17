@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="ActionRoomAuthority")

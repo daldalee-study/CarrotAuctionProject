@@ -15,7 +15,6 @@ import static com.carrot_auction.carrot_auction.domain.auction.enums.AuctionStat
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="Auction")
@@ -44,6 +43,7 @@ public class Auction extends BaseEntity {
     private int minimumBidAmount = 0;
 
     @Column(name = "State", nullable = false)
+    @Enumerated(EnumType.STRING)
     private AuctionState state = WAITING;
 
 }

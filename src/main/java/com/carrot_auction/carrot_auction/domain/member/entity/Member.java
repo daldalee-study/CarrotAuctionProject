@@ -9,7 +9,6 @@ import lombok.*;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="Member")
@@ -25,13 +24,13 @@ public class Member extends BaseEntity {
     @Column(name = "Password", nullable = false)
     private String password;
 
-    @Column(name = "Email", nullable = false)
+    @Column(name = "Email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "PhoneNo", nullable = false)
+    @Column(name = "PhoneNo", nullable = false, unique = true)
     private String phoneNo;
 
-    @Column(name = "Point", nullable = false, columnDefinition = "bigint default 0")
-    private Long point;
+    @Column(name = "Point", nullable = false)
+    private long point = 0;
 
 }

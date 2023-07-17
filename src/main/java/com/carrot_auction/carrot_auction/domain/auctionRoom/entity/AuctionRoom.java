@@ -13,7 +13,6 @@ import java.util.List;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="AuctionRoom")

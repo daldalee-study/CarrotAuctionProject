@@ -24,7 +24,7 @@ public class AuctionRoomChat {
     private AuctionRoomChatId auctionChatId;
 
     @Column(name = "BidPrice")
-    private int bidPrice;
+    private int bidPrice = 0;
 
     @CreatedDate
     @Column(name = "CreateAt", nullable = false, updatable = false)

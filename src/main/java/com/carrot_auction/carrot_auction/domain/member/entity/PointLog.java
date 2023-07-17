@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
@@ -31,6 +30,7 @@ public class PointLog {
     private int amount = 0;
 
     @Column(name = "Type")
+    @Enumerated(EnumType.STRING)
     private PointLogType type;
 
     @Column(name = "TotalPoint", nullable = false)

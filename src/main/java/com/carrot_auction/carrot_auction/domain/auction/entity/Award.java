@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="Award")
@@ -21,7 +20,8 @@ public class Award extends BaseEntity {
     @Column(name = "Id", updatable = false)
     private String id;
 
-    // JPA에서는 대상 테이블이 FK를 가지고 있는 것을 허용하지 않기 때문에 맵핑하지 않고 String 값으로 가져옴
+    // Auction과 OneToOne 맵핑 관계로 Award에서만 ActionId로 FK로 갖게 하려는 의도를 가졌으나
+    // PA에서는 대상 테이블이 FK를 가지고 있는 것을 허용하지 않기 때문에 맵핑하지 않고 String 값으로 가져옴
     @Column(name = "AuctionId")
     private String auctionId;
 
