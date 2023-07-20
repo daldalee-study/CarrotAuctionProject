@@ -19,7 +19,7 @@ public class AuctionRoomLog {
     @Column(name = "AuctionRoomId")
     private String auctionRoomId;
 
-    @Column(name = "Detail")
+    @Column(name = "Detail", length = 1300)
     private String detail;
 
     @CreatedDate

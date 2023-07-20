@@ -18,7 +18,7 @@ public class Terms extends BaseEntity {
     @Column(name = "Id")
     private String id;
 
-    @Column(name = "Comment")
+    @Column(name = "Comment", length = 1300)
     private String comment;
 
     @Column(name = "Type")

@@ -26,13 +26,13 @@ public class AccountApiLog {
     @Column(name = "MemberId", updatable = false)
     private String memberId;
 
-    @Column(name = "Url", nullable = false)
+    @Column(name = "Url", nullable = false, length = 1300)
     private String url;
 
-    @Column(name = "Response")
+    @Column(name = "Response", length = 1300)
     private String response;
 
-    @Column(name = "Request")
+    @Column(name = "Request", length = 1300)
     private String request;
 
     @Column(name = "Status")

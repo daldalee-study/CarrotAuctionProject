@@ -30,7 +30,7 @@ public class Auction extends BaseEntity {
     @Column(name = "Title", nullable = false)
     private String title;
 
-    @Column(name = "Comment")
+    @Column(name = "Comment", length = 1300)
     private String comment;
 
     @Column(name = "OpenAt", nullable = false)
