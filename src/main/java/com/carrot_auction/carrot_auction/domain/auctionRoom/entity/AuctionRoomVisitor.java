@@ -12,14 +12,13 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="AuctionRoomVisitor")
 public class AuctionRoomVisitor extends BaseEntity {
 
     @EmbeddedId
     private AuctionRoomVisitorId auctionRoomVisitorId;
 
     @ManyToOne
-    @JoinColumn(name = "AutorityId")
+    @JoinColumn(name = "autority_id")
     private ActionRoomAuthority authority;
 
 }

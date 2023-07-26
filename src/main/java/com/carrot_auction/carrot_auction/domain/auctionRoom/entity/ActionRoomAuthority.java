@@ -14,9 +14,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="ActionRoomAuthority")
 public class ActionRoomAuthority {
     @Id
-    @Column(name = "Id")
+    @Column
     private String id; //seller, bidders, audience
 }

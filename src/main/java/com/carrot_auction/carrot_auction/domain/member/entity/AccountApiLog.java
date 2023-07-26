@@ -15,30 +15,29 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-@Table(name="AccountApiLog")
 public class AccountApiLog {
     // 로그 테이블의 id로 seq 역할을 한다고 판단해서 GenerationType.IDENTITY로 생성
     @Id
-    @Column(name = "Id")
+    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "MemberId", updatable = false)
+    @Column(updatable = false)
     private String memberId;
 
-    @Column(name = "Url", nullable = false, length = 1300)
+    @Column(nullable = false, length = 1300)
     private String url;
 
-    @Column(name = "Response", length = 1300)
+    @Column(length = 1300)
     private String response;
 
-    @Column(name = "Request", length = 1300)
+    @Column(length = 1300)
     private String request;
 
-    @Column(name = "Status")
+    @Column
     private String status;
 
     @CreatedDate
-    @Column(name = "CreateAt", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createAt;
 }

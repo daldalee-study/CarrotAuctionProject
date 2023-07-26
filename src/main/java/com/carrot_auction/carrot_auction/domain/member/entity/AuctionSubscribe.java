@@ -16,19 +16,18 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="AuctionSubscribe")
 public class AuctionSubscribe extends BaseEntity {
     @Id
-    @Column(name = "Id", updatable = false)
+    @Column(updatable = false)
     private String id;
 
-    @Column(name = "AuctionId", nullable = false)
+    @Column(nullable = false)
     private String auctionId;
 
-    @Column(name = "MemberId", nullable = false)
+    @Column(nullable = false)
     private String memberId;
 
-    @Column(name = "OpenAt", nullable = false)
+    @Column(nullable = false)
     private LocalDateTime openAt;
 
 }

@@ -16,34 +16,33 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-@Table(name="PointLog")
 public class PointLog {
 
     @Id
-    @Column(name = "Id", updatable = false)
+    @Column(updatable = false)
     private String id;
 
-    @Column(name = "MemberId", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private String memberId;
 
-    @Column(name = "Amount", nullable = false)
+    @Column(nullable = false)
     private int amount = 0;
 
-    @Column(name = "Type")
+    @Column
     @Enumerated(EnumType.STRING)
     private PointLogType type;
 
-    @Column(name = "TotalPoint", nullable = false)
+    @Column(nullable = false)
     private int totalPoint = 0;
 
-    @Column(name = "IsSuccess")
+    @Column
     private Boolean isSuccess;
 
-    @Column(name = "Reason")
+    @Column
     private String reason;
 
     @CreatedDate
-    @Column(name = "CreateAt", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createAt;
 
 }

@@ -11,16 +11,15 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Terms")
 public class Terms extends BaseEntity {
 
     @Id
-    @Column(name = "Id")
+    @Column
     private String id;
 
-    @Column(name = "Comment", length = 1300)
+    @Column(length = 1300)
     private String comment;
 
-    @Column(name = "Type")
+    @Column
     private String type; //ex. 서비스 이용 약관 ..
 }

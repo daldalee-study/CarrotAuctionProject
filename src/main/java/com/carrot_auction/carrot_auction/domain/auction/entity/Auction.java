@@ -17,32 +17,31 @@ import static com.carrot_auction.carrot_auction.domain.auction.enums.AuctionStat
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Auction")
 public class Auction extends BaseEntity {
     @Id
-    @Column(name = "Id", updatable = false)
+    @Column(updatable = false)
     private String id;
 
     @ManyToOne
-    @JoinColumn(name = "SellerId", nullable = false, updatable = false)
+    @JoinColumn(nullable = false, updatable = false)
     private Member seller;
 
-    @Column(name = "Title", nullable = false)
+    @Column(nullable = false)
     private String title;
 
-    @Column(name = "Comment", length = 1300)
+    @Column(length = 1300)
     private String comment;
 
-    @Column(name = "OpenAt", nullable = false)
+    @Column(nullable = false)
     private LocalDateTime openAt;
 
-    @Column(name = "ClosedAt", nullable = false)
+    @Column(nullable = false)
     private LocalDateTime closedAt;
 
-    @Column(name = "MininumBidAmount", nullable = false)
+    @Column(nullable = false)
     private int minimumBidAmount = 0;
 
-    @Column(name = "State", nullable = false)
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private AuctionState state = WAITING;
 
