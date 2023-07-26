@@ -10,14 +10,4 @@ import static com.carrot_auction.carrot_auction.domain.member.entity.QPointLog.p
 public class MemberQRepositoryImpl implements MemberQRepository {
 
     JPAQueryFactory jpaQueryFactory;
-
-    public void test(){
-
-        jpaQueryFactory.select(
-                member.countDistinct()
-        ).from(member)
-                .join(pointLog).on()
-                .where()
-                .groupBy().distinct();
-    }
 }
