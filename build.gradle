@@ -77,7 +77,7 @@ bootJar {
 
 // Jacoco(2)
 jacoco {
-    toolVersion = "0.8.5"
+    toolVersion = "0.8.10"
     reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
 }
 
@@ -95,7 +95,7 @@ jacocoTestReport {
     reports {
         xml.required = false
         csv.required = false
-        html.outputLocation = layout.buildDirectory.dir('JacocoHtml')
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
 
