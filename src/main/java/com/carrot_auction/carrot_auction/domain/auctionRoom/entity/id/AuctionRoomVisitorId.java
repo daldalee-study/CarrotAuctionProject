@@ -23,6 +23,6 @@ public class AuctionRoomVisitorId implements Serializable {
     @JoinColumn(name = "auction_room_id")
     private AuctionRoom auctionRoom;
 
-    @Column(name = "member_id")
+    @Column
     private String memberId;
 }
