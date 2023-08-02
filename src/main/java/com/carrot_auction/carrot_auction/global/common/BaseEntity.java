@@ -16,13 +16,13 @@ import java.time.LocalDateTime;
 public abstract class BaseEntity {
 
     @CreatedDate
-    @Column(name = "CreateAt", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createAt;
 
     @LastModifiedDate
-    @Column(name = "UpdateAt", nullable = false)
+    @Column(nullable = false)
     private LocalDateTime updateAt;
 
-    @Column(name="IsDeleted", nullable = false, columnDefinition = "boolean default false")
+    @Column(nullable = false, columnDefinition = "boolean default false")
     private boolean isDeleted;
 }

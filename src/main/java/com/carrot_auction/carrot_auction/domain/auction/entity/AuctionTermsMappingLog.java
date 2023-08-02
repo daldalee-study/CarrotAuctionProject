@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="AuctionTermsMappingLog")
 public class AuctionTermsMappingLog {
     // 복합키 설정
     @EmbeddedId

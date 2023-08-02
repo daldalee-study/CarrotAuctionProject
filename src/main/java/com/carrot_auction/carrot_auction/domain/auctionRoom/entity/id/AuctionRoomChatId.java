@@ -20,9 +20,9 @@ import java.io.Serializable;
 public class AuctionRoomChatId implements Serializable {
 
     @ManyToOne
-    @JoinColumn(name = "AuctionRoomId")
+    @JoinColumn(name = "auction_room_id")
     private AuctionRoom auctionRoom;
 
-    @Column(name = "SpeakerId")
+    @Column
     private String speakerId;
 }

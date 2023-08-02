@@ -12,17 +12,16 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="AuctionRoomLog")
 public class AuctionRoomLog {
 
     @Id
-    @Column(name = "AuctionRoomId")
+    @Column
     private String auctionRoomId;
 
-    @Column(name = "Detail", length = 1300)
+    @Column(length = 1300)
     private String detail;
 
     @CreatedDate
-    @Column(name = "CreateAt", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createAt;
 }

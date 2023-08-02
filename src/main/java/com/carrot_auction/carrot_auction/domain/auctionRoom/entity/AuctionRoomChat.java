@@ -13,21 +13,19 @@ import java.time.LocalDateTime;
 
 @Getter
 @Entity
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-@Table(name="AuctionRoomChat")
 public class AuctionRoomChat {
 
     @EmbeddedId
     private AuctionRoomChatId auctionChatId;
 
-    @Column(name = "BidPrice")
+    @Column
     private int bidPrice = 0;
 
     @CreatedDate
-    @Column(name = "CreateAt", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createAt;
 
 }

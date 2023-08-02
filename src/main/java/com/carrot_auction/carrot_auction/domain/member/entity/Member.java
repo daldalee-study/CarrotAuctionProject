@@ -11,26 +11,25 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Member")
 public class Member extends BaseEntity {
 
     @Id
-    @Column(name = "Id", updatable = false)
+    @Column(updatable = false)
     private String id;
 
-    @Column(name = "Name", nullable = false)
+    @Column(nullable = false)
     private String name;
 
-    @Column(name = "Password", nullable = false)
+    @Column(nullable = false)
     private String password;
 
-    @Column(name = "Email", nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(name = "PhoneNo", nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String phoneNo;
 
-    @Column(name = "Point", nullable = false)
+    @Column(nullable = false)
     private long point = 0;
 
 }

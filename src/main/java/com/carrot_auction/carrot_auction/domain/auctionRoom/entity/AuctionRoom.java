@@ -15,19 +15,18 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="AuctionRoom")
 public class AuctionRoom extends BaseEntity {
     @Id
-    @Column(name = "Id", updatable = false)
+    @Column(updatable = false)
     private String id;
 
     @OneToOne
-    @JoinColumn(name = "AcutionId")
+    @JoinColumn(name = "acution_id")
     private Auction auctionId;
 
     @OneToMany
     private List<AuctionRoomVisitor> auctionVisitor = new ArrayList<>();
 
-    @Column(name = "MaxinumAmount")
+    @Column
     private int maximumAmount = 0;
 }

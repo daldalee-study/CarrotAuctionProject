@@ -16,12 +16,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class BidderTermsMappingLogId implements Serializable {
 
-    @Column(name = "AuctionId")
+    @Column
     private String auctionId;
 
-    @Column(name = "TermsId")
+    @Column
     private String termsId;
 
-    @Column(name = "MemberId")
+    @Column
     private String memberId;
 }
